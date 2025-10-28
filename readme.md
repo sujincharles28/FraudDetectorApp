@@ -50,18 +50,18 @@ These steps will create the Conda environment and install all system and Python 
 #### **Step 1: Clone the Repository**
 
 Open your WSL/Ubuntu terminal (e.g., in Windows Terminal) and clone this project:  
-git clone \[https://github.com/your-username/FraudDetectorApp.git\](https://github.com/your-username/FraudDetectorApp.git)  
-cd FraudDetectorApp
+'''git clone \[https://github.com/your-username/FraudDetectorApp.git\](https://github.com/your-username/FraudDetectorApp.git)  
+cd FraudDetectorApp'''
 
 #### **Step 2: Make the Setup Script Executable**
 
 Give the setup.sh script permission to run:  
-chmod \+x setup.sh
+'''chmod \+x setup.sh'''
 
 #### **Step 3: Run the Setup Script**
 
 This is the single command that will install everything. It will ask for your password to install Tesseract.  
-./setup.sh
+'''./setup.sh'''
 
 **What does this script do?**
 
@@ -76,9 +76,9 @@ After the setup.sh script is complete, you can run the TUI at any time by follow
 #### **Step 1: Activate the Conda Environment**
 
 Every time you open a new terminal, you must first activate the environment:  
-conda activate fraud-env
+'''conda activate fraud-env'''
 
 #### **Step 2: Run the TUI Script**
 
 Once the (fraud-env) prefix appears in your prompt, run the application:  
-python tui2.py  
+'''python tui2.py'''  
