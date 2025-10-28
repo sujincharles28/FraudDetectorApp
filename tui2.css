@@ -1,0 +1,369 @@
+/* tui2.css (Unified TUI - Teal/Grey Theme - Full Screen Layout - Compatible with Textual 6.4.0) */
+
+/* --- Base Theme (Teal/Grey) --- */
+App {
+    background: #2e4949; /* Dark Teal */
+    color: #e0e0e0;      /* Light Grey Text */
+}
+
+/* --- Header & Footer --- */
+Header {
+    background: #1e3a3a; /* Darker Teal */
+    color: #a7ffeb;      /* Mint Accent */
+    padding: 0 1;
+    border-bottom: heavy #a7ffeb; /* Mint Accent */
+    text-style: bold;
+    height: auto;
+    dock: top;
+}
+
+Footer {
+    background: #1e3a3a; /* Darker Teal */
+    color: #80cbc4;      /* Muted Mint */
+    border-top: thick #424242; /* Grey Border */
+    height: auto;
+    dock: bottom;
+}
+
+/* --- General Containers --- */
+Vertical {
+    padding: 0 1;
+}
+
+Horizontal {
+    align: center middle;
+    height: auto;
+}
+
+/* --- Buttons --- */
+Button {
+    height: 3;
+    min-width: 15;
+    margin: 1;
+    padding: 0 2;
+    border: round #616161; /* Dark Grey Border */
+    color: #ffffff;         /* White Text */
+    background: #424242; /* Medium Grey */
+    text-align: center;
+}
+Button:hover {
+    background: #555555; /* Lighter Grey */
+    border: round #a7ffeb; /* Mint Accent */
+    color: #a7ffeb;         /* Mint Accent */
+    text-style: bold;
+}
+Button.-active { /* Focus style */
+    border: double #c5e1a5; /* Light Green */
+    color: #c5e1a5;
+}
+Button:disabled {
+    background: #333333; /* Darker Grey */
+    color: #616161;      /* Dark Grey */
+    border: round #333333;
+    text-style: dim;
+}
+
+
+Button.primary {
+    background: #80cbc4; /* Muted Mint */
+    color: #1e3a3a;      /* Dark Teal */
+    border: round #e0e0e0; /* Light Grey */
+    text-style: bold;
+}
+Button.primary:hover { background: #a7ffeb; color: #1e3a3a; } /* Brighter Mint */
+Button.primary.-active { border: double #1e3a3a; }
+
+Button.warning {
+    background: #c5e1a5; /* Light Green */
+    color: #1e3a3a;      /* Dark Teal */
+    border: round #1e3a3a;
+}
+Button.warning:hover { background: #d7edb9; } /* Lighter Green */
+Button.warning.-active { border: round #ef9a9a; } /* Light Red */
+
+Button.error {
+    background: #ef9a9a; /* Light Red */
+    color: #1e3a3a;      /* Dark Teal */
+    border: round #1e3a3a;
+}
+Button.error:hover { background: #ffcdd2; } /* Lighter Red */
+Button.error.-active { border: round #c5e1a5; } /* Light Green */
+
+
+/* --- Navigation Bar (Top) --- */
+.nav-bar {
+    width: 100%;
+    height: auto;
+    align: left middle; /* Align vertically */
+    padding: 0;
+    margin: 0;
+}
+/* Make the empty Static() widget expand to fill space */
+.nav-bar > Static {
+    width: 1fr;
+}
+
+
+/* --- Back Button --- */
+.back-button {
+    width: auto;
+    min-width: 10;
+    height: 1;
+    margin: 1 0 1 1;
+    padding: 0 1;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #80cbc4; /* Muted Mint */
+    text-style: bold italic;
+}
+.back-button:hover {
+    background: #424242; /* Medium Grey */
+    color: #a7ffeb;     /* Bright Mint */
+    border: round #80cbc4;
+}
+
+/* --- Quit Button (Top Right) --- */
+.quit-button {
+    width: auto;
+    min-width: 10;
+    height: 1;
+    margin: 1 1 1 0; /* Align right */
+    padding: 0 1;
+    text-align: right;
+    background: transparent;
+    border: none;
+    color: #ef9a9a; /* Light Red */
+    text-style: bold italic;
+}
+.quit-button:hover {
+    background: #424242; /* Medium Grey */
+    color: #ffcdd2;     /* Lighter Red */
+    border: round #ef9a9a; /* Light Red */
+}
+
+
+/* --- Specific Views & Elements --- */
+
+/* Class to hide views */
+.view-hidden {
+    display: none !important;
+}
+
+/* Universal Title Style */
+.view-title {
+    text-align: center;
+    text-style: bold;
+    color: #ffffff; /* White */
+    margin-bottom: 2;
+    padding: 1 2;
+    width: auto;
+    max-width: 90%;
+}
+
+/* Welcome Screen - Full Screen */
+#welcome-container {
+    align: center top;
+    padding: 2 4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    background: #2e4949;
+}
+#welcome-container .view-title {
+     border-bottom: thick #616161;
+     margin-top: 2;
+     margin-bottom: 3;
+     color: #ffffff;
+}
+.instructions {
+    text-align: left;
+    margin: 2 0;
+    color: #e0e0e0;
+    width: 70%;
+    height: 1fr;
+    min-height: 10;
+    padding: 1;
+    border: round #616161;
+    background: #424242;
+}
+.start-button {
+    margin-top: 3;
+    margin-bottom: 1;
+    width: auto;
+    min-width: 25%;
+}
+
+/* Mode Selection Screen - Full Screen */
+#mode-selection-container {
+    align: center middle;
+    padding: 2 4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    background: #2e4949;
+}
+.mode-prompt {
+    color: #c5e1a5;
+    border-bottom: thick #c5e1a5;
+    margin-bottom: 5;
+    width: auto;
+    min-width: 40%;
+}
+#mode-buttons {
+    margin-bottom: 4;
+    width: 100%;
+    align: center middle;
+}
+.mode-button {
+    width: 35%;
+    height: 5;
+    background: #424242;
+    margin: 0 4;
+    border: double #80cbc4;
+}
+.mode-button:hover {
+    background: #555555;
+    border: double #c5e1a5;
+}
+.back-button-centered {
+    /* This style is no longer used by tui2.py, but safe to keep */
+    width: auto;
+    min-width: 20%;
+    margin: 2 0;
+    background: #424242;
+    border: round #616161;
+}
+
+
+/* Text & Image Input Screens Common */
+#text-input-container, #image-input-container {
+    padding: 0 1 1 1;
+    align: center top;
+    height: 100%;
+}
+
+.input-prompt {
+    margin: 1 0 1 0;
+    color: #e0e0e0;
+    width: 90%;
+    text-style: bold;
+    height: auto;
+    text-align: center;
+}
+
+#action-buttons-text, #action-buttons-image {
+    width: 90%;
+    height: auto;
+    align: center middle;
+    margin: 1 0;
+}
+.action-button { width: auto; min-width: 30%; margin: 0 2;}
+
+/* Loading Indicator */
+.loading-indicator {
+    height: 1;
+    margin: 1 0;
+    align: center middle;
+    color: #a7ffeb;
+}
+
+/* Results Output Box */
+.results-output {
+    margin-top: 1;
+    height: 1fr;
+    min-height: 5;
+    width: 90%;
+    margin: 1 0;
+    border: double #80cbc4;
+    padding: 1 2;
+    content-align: center middle;
+    color: #e0e0e0;
+    text-align: center;
+    background: #424242;
+    overflow: auto;
+}
+
+/* Text Input Specific */
+#job_input {
+    height: 3fr;
+    width: 90%;
+    margin: 0 0 1 0;
+    border: round #c5e1a5;
+    padding: 1;
+    background: #424242;
+    color: #e0e0e0;
+}
+#job_input:focus {
+    border: round #ffff8d;
+    background: #555555;
+}
+
+/* Image Input Specific */
+DirectoryTree {
+    height: 3fr;
+    width: 90%;
+    margin: 1 0;
+    border: round #b39ddb;
+    background: #424242;
+    padding: 0 1;
+}
+DirectoryTree:focus { border: round #ffff8d; }
+
+/* Directory Tree Colors */
+DirectoryTree > .directory--selected { background: #555555; color: #e0e0e0 !important; }
+DirectoryTree > .directory--root { color: #80cbc4; text-style: bold; }
+DirectoryTree > .directory--directory { color: #80cbc4; }
+DirectoryTree > .directory--file { color: #c5e1a5; }
+DirectoryTree > .directory--file-selected { color: #e0e0e0 !important; text-style: bold; background: #555555;}
+DirectoryTree > .directory--hidden { color: #616161; }
+
+
+.selected-file-display {
+    height: 3;
+    width: 90%;
+    margin: 1 0;
+    border: dashed #b39ddb;
+    padding: 1;
+    content-align: center middle;
+    color: #e0e0e0;
+    text-align: center;
+    background: #424242;
+}
+
+.ocr-output {
+    height: 8;
+    width: 90%;
+    margin: 1 0;
+    border: round #ffff8d;
+    padding: 1;
+    color: #e0e0e0;
+    background: #424242;
+    overflow-y: scroll;
+}
+
+/* Error view styling */
+#error-container {
+    align: center middle;
+    height: 100%;
+}
+#error-container .view-title {
+    color: #ef9a9a;
+    border: heavy #ef9a9a;
+    margin-bottom: 2;
+}
+#error-container .instructions {
+    text-align: center;
+    color: #e0e0e0;
+    margin: 1 2;
+}
+#error-container Button { margin-top: 2; }
+
+
+/* Class to hide views */
+.view-hidden {
+    display: none !important;
+}
+

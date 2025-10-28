@@ -1,0 +1,37 @@
+{
+  "additional_special_tokens": [
+    {
+      "content": "[URL]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "[EMAIL]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "[PHONE]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false
+    },
+    {
+      "content": "[NUMBER]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false
+    }
+  ],
+  "cls_token": "[CLS]",
+  "mask_token": "[MASK]",
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "unk_token": "[UNK]"
+}

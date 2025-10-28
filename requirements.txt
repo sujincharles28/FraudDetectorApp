@@ -1,0 +1,8 @@
+torch
+torchvision
+transformers
+textual==6.4.0
+pytesseract
+pillow
+scikit-learn
+pandas
